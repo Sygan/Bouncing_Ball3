@@ -3,4 +3,4 @@
 
 Just a game about bouncing a ball.
 
-Added this line. Add added this text.
+Added this line. And this was added on the server.
