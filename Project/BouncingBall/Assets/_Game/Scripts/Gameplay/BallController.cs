@@ -10,6 +10,7 @@ public class BallController : MonoBehaviour
     public Rigidbody Rigidbody;
     public TextMeshProUGUI TextField;
     public GameObject GameOverPanel;
+    public Animator Animator;
     
     public float HorizontalForceMin;
     public float HorizontalForceMax;
@@ -32,6 +33,8 @@ public class BallController : MonoBehaviour
         {
             points++;
             TextField.text = points.ToString();
+            
+            Animator.SetTrigger("Bounce");
         }
     }
 
