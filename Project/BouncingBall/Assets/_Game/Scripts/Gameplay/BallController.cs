@@ -9,7 +9,7 @@ public class BallController : MonoBehaviour
 {
     public Rigidbody Rigidbody;
     public TextMeshProUGUI TextField;
-    
+    public GameObject GameOverPanel;
     
     public float HorizontalForceMin;
     public float HorizontalForceMax;
@@ -35,4 +35,11 @@ public class BallController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Finish"))
+        {
+            GameOverPanel.SetActive(true);
+        }
+    }
 }
